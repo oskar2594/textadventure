@@ -1,0 +1,55 @@
+1
+1
+1
+1
+1
+move right
+move right
+loot
+move up
+loot
+move down
+move down
+move right
+loot
+move left
+use schlauch
+move down
+move down
+move right
+move right
+move right
+move down
+move left
+move down
+move right
+move right
+move right
+move right
+loot
+move down
+move left
+move up
+1
+1
+move right
+1
+move right
+move right
+move up
+move right
+move left
+move left
+move left
+loot
+move left
+move left
+move down
+move right
+move right
+loot
+move up
+loot
+move left
+move left
+HEUREKA

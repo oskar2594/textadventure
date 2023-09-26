@@ -1,0 +1,27 @@
+items:
+  - id: flashlight
+    description: Eine starke Taschenlampe.
+    weight: 0.3
+  - id: note1
+    description: Ein Notizzettel.
+    inspect: "Auf der Notiz steht: \"Glück auf. Das Licht des Tages ist des Bergmanns Lohn\""
+    weight: 0.
+  - id: schlauch
+    description: Ein Schlauch.
+    weight: 0.1
+  - id: winekey
+    description: Ein Schlüssel mit Weinranken.
+    inspect: "Der Schlüssel ist aus Silber und hat eine Weinranke als Motiv."
+    weight: 0.1
+  - id: note2
+    description: Ein Notizzettel.
+    inspect: "Auf dem Notizzettel stehen Buchstaben: U R E K A H E"
+    weight: 0.1
+  - id: note3
+    description: Ein Notizzettel.
+    inspect: "Auf dem Notizzettel steht: \"An den Rittern vorbei kommen nur die Starken. Ist man passiert wird die Arbeit warten.\""
+    weight: 0.1
+  - id: note4
+    description: Ein Notizzettel.
+    inspect: "Auf dem Notizzettel steht: \"Die Bibliothek ist voller Wissen! Glaube nicht alles was geschrieben ist, so muss der Inhalt sortiert werden um ihn zu verstehen!\""
+    weight: 0.1

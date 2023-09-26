@@ -1,0 +1,9 @@
+console:
+  cursor: "<"
+  color: ""
+  pause: "$"
+  timePerPause: 750
+  timePerSpace: 50
+  timePerChar: 10
+  blinkTime: 100
+  width: 80

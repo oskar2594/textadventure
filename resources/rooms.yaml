@@ -1,0 +1,939 @@
+
+rooms:
+  - id: start_room
+    name: Kaffekanne
+    description: |-
+      Du bist in der Kaffekanne, die Basis der drei ???. Peter ist in den Sitzsack halb verschwunden.
+    connections:
+      - id: start2castle
+        direction: right
+        description: Onkel Titus wartet auf dich um loszufahren.
+        use: Du fährst mit Onkel Titus los. Ihr biegt nach einer langen Fahrt rechts ab. Ihr seht in der Ferne ein Schloss. Es hat die Hausnummer 1, das einzige Haus in der Straße.
+        room_id: castle
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: Hey Justus! Schau mal hier in der Zeitung. McMurdock muss ein Rätsel lösen, um das Schloss seines Vaters zu erben
+          options:
+            - name: Das ist doch genau das, was wir brauchen!
+              sequence:
+                text: Ja genau! Hier steht, dass er ein Team braucht, um das Rätsel zu lösen. Wir sollten uns bewerben!
+                options:
+                  - name: Ja, das ist eine gute Idee!
+                    sequence:
+                      text: "*HUPEN* Warte mal, has du das gehört?"
+                      options:
+                        - name: Nein, was ist denn los?
+                          sequence:
+                            text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                            options:
+                              - name: Ja, wir haben es gerade gelesen!
+                                sequence:
+                                  text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                              - name: Was meinst du?
+                                sequence:
+                                  text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                        - name: Ja, aber wer kann das sein?
+                          sequence:
+                            text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                            options:
+                              - name: Ja, wir haben es gerade gelesen!
+                                sequence:
+                                  text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                              - name: Was meinst du?
+                                sequence:
+                                  text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                  - name: Nein, das ist zu gefährlich!
+                    sequence:
+                      text: "Was? Warum? Wir haben doch nichts zu verlieren!"
+                      options:
+                        - name: Du has Recht, komm wir schreiben eine E-Mail
+                          sequence:
+                            text: "*HUPEN*$$ Warte mal, has du das gehört?"
+                            options:
+                              - name: Nein, was ist denn los?
+                                sequence:
+                                  text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                                  options:
+                                    - name: Ja, wir haben es gerade gelesen!
+                                      sequence:
+                                        text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+                                    - name: Was meinst du?
+                                      sequence:
+                                        text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+                              - name: Ja, aber wer kann das sein?
+                                sequence:
+                                  text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                                  options:
+                                    - name: Ja, wir haben es gerade gelesen!
+                                      sequence:
+                                        text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+                                    - name: Was meinst du?
+                                      sequence:
+                                        text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+            - name: Was meinst du?
+              sequence:
+                text: Er braucht ein Team, um das Rätsel zu lösen. Wir sollten uns bewerben!
+                options:
+                  - name: Ja, das ist eine gute Idee!
+                    sequence:
+                      text: "*HUPEN* Warte mal, has du das gehört?"
+                      options:
+                        - name: Nein, was ist denn los?
+                          sequence:
+                            text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                            options:
+                              - name: Ja, wir haben es gerade gelesen!
+                                sequence:
+                                  text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Wir müssen los!
+                                        end: true
+                              - name: Was meinst du?
+                                sequence:
+                                  text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                        - name: Ja, aber wer kann das sein?
+                          sequence:
+                            text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                            options:
+                              - name: Ja, wir haben es gerade gelesen!
+                                sequence:
+                                  text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Wir müssen los!
+                                        end: true
+                              - name: Was meinst du?
+                                sequence:
+                                  text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                  options:
+                                    - name: Na dann Leute, los gehts!
+                                      sequence:
+                                        text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                        end: true
+                  - name: Nein, das ist zu gefährlich!
+                    sequence:
+                      text: "Was? Warum? Wir haben doch nichts zu verlieren!"
+                      options:
+                        - name: Du has Recht, komm wir schreiben eine E-Mail
+                          sequence:
+                            text: "*HUPEN*$$ Warte mal, has du das gehört?"
+                            options:
+                              - name: Nein, was ist denn los?
+                                sequence:
+                                  text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                                  options:
+                                    - name: Ja, wir haben es gerade gelesen!
+                                      sequence:
+                                        text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Wir müssen los!
+                                              end: true
+                                    - name: Was meinst du?
+                                      sequence:
+                                        text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+                              - name: Ja, aber wer kann das sein?
+                                sequence:
+                                  text: "Das ist Onkel Titus! $$\nOnkel Titus: Hey, ihr drei! Habt ihr schon die Zeitung gelesen?"
+                                  options:
+                                    - name: Ja, wir haben es gerade gelesen!
+                                      sequence:
+                                        text: "Onkel Titus: Kommt runter, McMurdock warten auf euch!"
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Wir müssen los!
+                                              end: true
+                                    - name: Was meinst du?
+                                      sequence:
+                                        text: McMordock braucht ein Team, um das Rätsel zu lösen. Ich habe euch vorgeschlagen und er hat gesagt, dass wir so schnell wie möglich kommen sollen!
+                                        options:
+                                          - name: Na dann Leute, los gehts!
+                                            sequence:
+                                              text: McMurdock wartet auf uns, Justus! Ich kann es nicht glauben!!! Wir müssen los!!
+                                              end: true
+  - id: end_room
+    name: End
+    description: |- 
+      Das ist das Ende des Spiels. Du hast gewonnen!
+    connections: null
+  - id: castle
+    name: Schloss
+    description: |-
+      Das Schloss von McMurdock ist riesig. Es ist ein altes Schloss, aber es ist sehr gut erhalten.
+      Der Eingangsbereich ist riesig und sehr schön. Es gibt viele Säulen und Statuen. Es ist sehr hell und es gibt viele Fenster.
+    connections:
+      - id: castle2corridor
+        direction: right
+        description: Es führt ein großes offenes Tor in einen langen Korridor.
+        use: Du gehst gemeinsam mit Peter und Bob in den Korridor.
+        room_id: corridor
+      - id: castle2garden
+        locked: true
+        direction: up
+        description: Im hinteren Teil des Schlosses gibt es ein Türchen, das in einen Garten führt.
+        use: Du gehst gemeinsam mit Peter und Bob in den Garten.
+        room_id: garden
+      - id: castle2end
+        direction: left
+        description: Ein kleines Tor führt in einen kleinen Raum, in dem drei Testamentsvollstrecker sitzen.
+        use: ""
+        room_id: end_room
+        task:
+          type: code
+          description: Ihr wollt also das Testament von McMurdock erben? Dafür müsst ihr uns das Lösungswort für das Rätsel geben.
+          fail: Das Lösungswort ist leider falsch, da müssen die jungen Erwachsenn wohl noch ein bisschen weiter rätseln.
+          success: Das ist richtig! Ihr habt das Rätsel gelöst und könnt das Testament von McMurdock erben. Herzlichen Glückwunsch!
+          code: HEUREKA
+  - id: garden
+    name: Garten
+    description: |-
+      Der Garten ist sehr schön. Es gibt viele Blumen und Bäume. Es ist sehr ruhig und entspannend.
+      Es gibt einen kleinen Teich, der von einem kleinen Bach gespeist wird.
+    connections:
+      - id: garden2castle
+        direction: down
+        description: Ein kleines Tor führt in den Eingangsbereich des Schlosses.
+        use: Du gehst gemeinsam mit Peter und Bob in den Eingangsbereich des Schlosses.
+        room_id: castle
+      - id: garden2mountain
+        direction: right
+        description: Eine Gondel ermöglicht euch den Aufstieg auf den Weinberg, den ihr von hier aus sehen könnt.
+        use: Ihr steigt in die Gondel. Pete entdeckt sofort das Bedienelement und steuert die Gondel in die richtige Richtung.
+        room_id: mountain
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Hey schaut mal, da ist eine Gondel!"
+          options:
+            - name: Ja, das ist eine Gondel. Wo die wohl hin führt?
+              sequence:
+                text: "Ich glaube, da oben ist ein Weinberg. Da müssten wir hin."
+                options:
+                  - name: Ja, das ist eine gute Idee. Wir sollten die Gondel benutzen um auf den Weinberg zu kommen.
+                    sequence:
+                      text: "Ja, das ist eine gute Idee. Wir sollten die Gondel benutzen."
+                      end: true
+                  - name: Nein, wir sollten lieber weiter nach McMurdock suchen.
+                    sequence:
+                      text: "Ach quatsch, der ist doch schon tot. Wir sollten lieber die Gondel benutzen."
+                      end: true
+            - name: Ja! Wir sollten die Gondel benutzen um auf den Weinberg zu kommen.
+              sequence:
+                text: "Ja, das ist eine gute Idee! Steigt ein!"
+                end: true
+  - id: mountain
+    name: Berg
+    description: |-
+      Der Weinberg ist sehr schön. Es gibt viele Reben und es ist sehr ruhig und entspannend.
+      Es gibt einen kleinen Teich, der von einem Wasserfall gespeist wird.
+    connections:
+      - id: mountain2garden
+        direction: left
+        description: Eine Gondel ermöglicht euch den Abstieg zurück in den Garten.
+        use: Ihr steigt in die Gondel. Peter steuert die Gondel den Berg runter.
+        room_id: garden
+      - id: mountain2lake
+        direction: right
+        description: Ein schmaler Weg führt zu einem See.
+        use: Ihr geht gemeinsam mit Peter und Bob zu dem See.
+        room_id: lake
+      - id: mountain2lakeoff
+        locked: true
+        direction: down
+        description: Ein schmaler Weg führt zu einem See.
+        use: Ihr geht gemeinsam mit Peter und Bob zu dem See.
+        room_id: lakeempty
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Schaut mal dort! Da ist ein See! Habt ihr Lust zu schwimmen?"
+          options:
+            - name: Ja, das ist eine gute Idee. Bist du auch dabei Peter?.
+              sequence:
+                text: "Ab gehts! Kommt schon wir springen rein!"
+                end: true
+            - name: Nein, wir sollten lieber weiter nach McMurdock suchen.
+              sequence:
+                text: "Ach quatsch, der ist doch schon tot. Wir sollten lieber schwimmen gehen."
+                options:
+                  - name: Naja. Okay, ich bin einverstanden!
+                    sequence:
+                      text: "Ab gehts! Kommt schon wir springen rein!"
+                      end: true
+  - id: lake
+    name: See
+    description: |-
+      Der See ist sehr schön. Es gibt viele Fische und es ist sehr ruhig und entspannend.
+      Es gibt einen kleinen Wasserfall, der von einem kleinen Bach gespeist wird.
+    connections:
+      - id: lake2mountain
+        direction: left
+        description: Ein schmaler Weg führt zurück zum Weinberg.
+        use: Ihr geht gemeinsam mit Peter und Bob zurück zum Weinberg.
+        room_id: mountain
+      - id: lake2waterfall
+        direction: right
+        description: Hinter dem Wassefall siehst du einen schmalen Gang.
+        use: Du schwimmst zu dem Wassefall.
+        room_id: waterfall
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Schaut mal dort! Hinter dem Wasserfall ist ein Gang!"
+          end: true
+  - id: waterfall
+    name: Wasserfall
+    description: |-
+      Der Wassefall fließt bestimmt 10 Meter in die Tiefe. Es ist sehr laut und es ist sehr kalt.
+      Es gibt einen kleinen Gang hinter dem Wassefall.
+    connections:
+      - id: waterfall2lake
+        direction: left
+        description: Du kannst zurück zum See schwimmen.
+        use: Du schwimmst zurück zum See.
+        room_id: lake
+      - id: waterfall2gang10
+        direction: up
+        description: Du kannst in den Gang klettern.
+        use: Du kletterst in den Gang. Peter und Bob folgen dir.
+        room_id: gang10
+  - id: gang10
+    name: Gang
+    description: Der Gang ist sehr lang. Es ist sehr dunkel und es ist sehr kalt.
+    connections:
+      - id: gang102waterfall
+        direction: down
+        description: Es führt ein Weg zurück zum Wasserfall.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Wasserfall.
+        room_id: waterfall
+      - id: gang102engineroom
+        direction: right
+        description: Es führt ein Weg in den Maschinenraum.
+        use: Du gehst in den Maschinenraum.
+        room_id: engineroom
+      - id: gang102outside
+        locked: true
+        direction: left
+        description: Es hat sich eine Tür geöffnet. Es führt ein Weg nach draußen.
+        use: Du gehst nach draußen.
+        room_id: outside
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: |-
+            Schau da! Da steht schon wieder "Glück auf. Das Licht des Tages ist des Bergmanns Lohn".$ Das ist der gleiche Spruch, der auch in der Mine stand.
+            Das bedeutet, dass das hier wahrscheinlich die gleiche Tür ist!$$  
+            Am besten gehen Bob und Peter nach unten und öffnen die Tür. Ich bleibe hier oben und schaue, ob ich die Tür dann öfnnen kann.
+            $$$ Nach 15 Minuten klopfen Peter und Bob an der Tür. Du öffnest die Tür von deiner Seite und sie öffnet sich!
+            Der Wind bläst euch entgegen und ihr seht eine Geheimtür, die sich öffnet.
+          end: true
+  - id: engineroom
+    name: Maschinenraum
+    description: In der Mitte des Maschiennraums ist ein großer Schalter.
+    connections:
+      - id: engineroom2gang10
+        direction: left
+        description: Es gibt einen Gang, der zurück zum Gang führt.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Gang.
+        room_id: gang10
+    objects:
+      - type: unlocker
+        use_item: null
+        connection: mountain2lakeoff
+        description: null
+      - type: unlocker
+        use_item: null
+        connection: gang102outside
+        description: null
+      - type: locker
+        use_item: null
+        connection: mountain2lake
+        description: null
+      - type: locker
+        use_item: null
+        connection: gang102waterfall
+        description: null
+      - type: unlocker
+        use_item: null
+        connection: corridor2workroom
+        description: null
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Ihr seht einen Schalter. Peter schlägt vor, dass er den Schalter drückt, was er auch macht. $$Ihr hört ein klirrendes Geräusch und eine Tür öffnet sich."
+          end: true
+  - id: outside
+    name: Außenbereich
+    description: Der See ist so gut wie leer. Der Wasserfall ist verschwunden.
+    connections:
+      - id: outside2gang10
+        direction: up
+        description: Es führt ein Weg zurück zum Gang.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Gang.
+        room_id: gang10
+      - id: outside2lakeempty
+        direction: left
+        description: Du kannst in den See hineinklettern.
+        use: Du kletterst in den See.
+        room_id: lakeempty
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Ihr seit völlig überrascht. Der Wasserfall ist verschwunden und der See ist beinahe Leer. Es kommen Schachfiguren zum Vorschein."
+          end: true
+  - id: lakeempty
+    name: See
+    description: Der See ist leer. Die Fische sind anscheinend alle Attrappen.
+    connections:
+      - id: lake2mountain
+        direction: left
+        description: Ein schmaler Weg führt zurück zum Weinberg.
+        use: Ihr geht gemeinsam mit Peter und Bob zurück zum Weinberg.
+        room_id: mountain
+      - id: lake2outside
+        direction: right
+        description: Du kannst zurück zum Außenbereich klettern.
+        use: Du kletterst zurück zum Außenbereich.
+        room_id: outside
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Schaut mal da! Die eine Schachfigur ist fast umgekippt. Ich kann einen Hohlraum sehen. Wartet da liegt ein Zettel."
+          end: true
+      - type: lootable
+        item: note3
+        amount: 1
+        loot: Du hast den Zettel aus dem Hohlraum genommen. Schau in dir mit "inspect note3" an.
+        unlocker: null
+  - id: corridor
+    name: Flur
+    description: Der Flur ist sehr lang. Es ist sehr dunkel und es ist sehr kalt. Es stehen viele Ritterfiguren herum.
+    connections:
+      - id: corridor2castle
+        direction: left
+        description: Es führt ein Weg zurück zum Schloss.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Schloss.
+        room_id: castle
+      - id: corridor2sleep
+        direction: up
+        description: Es führt ein Weg in das Schlafzimmer.
+        use: Du gehst in das Schlafzimmer.
+        room_id: sleep
+      - id: corridor2basement
+        direction: down
+        description: Es führt ein Weg in den Keller.
+        use: Du gehst in den Keller.
+        room_id: basement
+      - id: corridor2workroom
+        locked: true
+        direction: right
+        description: Am Ende des Flurs hat sich die Wand geöffnet. Es führt ein Geheimweg in das Arbeitszimmer.
+        use: Du gehst durch den Geheimweg in das Arbeitszimmer.
+        room_id: workroom
+    objects:
+      - type: lootable
+        item: winekey
+        amount: 1
+        loot: Du hast den Schlüssel gefunden. Schau in dir mit "inspect winekey" an.
+        unlocker: null
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Schaut mal diese Ritterfigur an. Sie hat als einzige den Arm oben. $$Ohh was ist das? Da ist ein Schlüssel in seiner Hand. Nimm du ihn mal mit, Justus!"
+          end: true
+  - id: workroom
+    name: Arbeitszimmer
+    description: Das Arbeitszimmer ist sehr groß. Es ist sehr hell und es ist sehr warm. Es stehen viele explosive Schafiguren im Regal. Auf dem Schreibtisch liegt ein Zettel.
+    connections:
+      - id: workroom2corridor
+        direction: left
+        description: Es führt ein Weg zurück zum Flur.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Flur.
+        room_id: corridor
+      - id: workroom2library
+        direction: up
+        description: Es führt ein Weg in die Bibliothek.
+        use: Du gehst in die Bibliothek.
+        room_id: library
+    objects:
+      - type: lootable
+        item: note4
+        amount: 1
+        loot: Du hast den Zettel genommen. Schau in dir mit "inspect note4" an.
+        unlocker: null
+  - id: library
+    name: Bibliothek
+    description: Die Bibliothek ist sehr groß. Es ist sehr dunkel und es ist sehr warm. Es stehen viele Bücher im Regal. An einem Regal ist ein Zettel.
+    connections:
+      - id: library2workroom
+        direction: down
+        description: Es führt ein Weg zurück zum Arbeitszimmer.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Arbeitszimmer.
+        room_id: workroom
+      - id: library2castle
+        direction: left
+        description: Es führt eine Abkürzung zurück zum Schloss.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Schloss.
+        room_id: castle
+    objects:
+      - type: lootable
+        item: note2
+        amount: 1
+        loot: Du hast den Zettel genommen. Schau in dir mit "inspect note2" an.
+        unlocker: null
+  - id: sleep
+    name: Schlafzimmer
+    description: Das Schlafzimmer ist sehr geräumig. Die Fenster sind mit Gittern verschlossen. In deinem Rucksack ist eine Taschenlampe.
+    connections:
+      - id: sleep2corridor
+        direction: down
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Flur.
+        description: Es führt ein Weg zurück zum Flur.
+        room_id: corridor
+    objects:
+      - type: lootable
+        item: flashlight
+        amount: 1
+        loot: Du hast die Taschenlampe genommenm, du wirst sie brauchen.
+        unlocker: null
+  - id: basement
+    name: Keller
+    description: Der Keller ist sehr dunkel. Es ist sehr kalt und es ist sehr feucht. Es stehen viele Kisten herum.
+    connections:
+      - id: basement2castle
+        locked: true
+        direction: left
+        description: Es führt ein Weg zurück zum Schloss.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Schloss.
+        room_id: castle
+      - id: basement2corridor
+        direction: up
+        description: Es führt ein Weg zurück zum Flur.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Flur.
+        room_id: corridor
+      - id: basement2winecellar
+        direction: right
+        description: Es führt ein Weg in den Weinkeller.
+        use: Du gehst in den Weinkeller, der Schlüssel passt.
+        room_id: winecellar
+        task:
+          type: item
+          description: Du brauchst einen Schlüssel, da die Tür verschlossen ist.
+          fail: Leider hast du den Schlüssel nicht. Du musst ihn finden.
+          success: Zum Glück hast du den Schlüssel gefunden. Du kannst nun in den Weinkeller gehen.
+          item_id: winekey
+          amount: 1
+  - id: winecellar
+    name: Weinkeller
+    description: In dem Weinkeller sind unzählige Fässer. Es ist sehr dunkel und es ist sehr kalt. Es liegt ein Schlauch mit den Initialien "LZ" auf dem Boden.
+    connections:
+      - id: winecellar2barells
+        direction: right
+        description: Es gibt einen Raum, wo weitere Fässer stehen.
+        use: Du gehst in den Raum mit den Fässern.
+        room_id: barells
+      - id: winecellar2emptybarell
+        direction: left
+        description: Es gibt einen Raum, wo nur ein Fass steht.
+        use: Du gehst in den Raum mit dem Fass.
+        room_id: emptybarell
+    objects:
+      - type: lootable
+        item: schlauch
+        amount: 1
+        loot: Du nimmst den Schlauch mit.
+        unlocker: null
+  - id: barells
+    name: Fässer
+    description: Der Raum ist voll mit gefüllten Fässern. Sie scheinen einem gewissen "DK" zu gehören.
+    connections:
+      - id: barells2winecellar
+        direction: left
+        description: Es führt ein Weg zurück zum Weinkeller.
+        use: Du gehst gemeinsam mit Peter und Bob zurück zum Weinkeller.
+        room_id: winecellar
+  - id: emptybarell
+    name: Leeres Fass
+    description: Es steht nur ein Fass in der Mitte des Raumes. Es ist leer.
+    connections:
+      - id: emptybarell2winecellar
+        direction: right
+        description: Es führt ein Weg zurück zum Weinkeller.
+        use:  Du gehst gemeinsam mit Peter und Bob zurück zum Weinkeller.
+        room_id: winecellar
+      - id: emptybarell2hole
+        locked: true
+        direction: down
+        description: Das Fass hat einen Schacht im Boden erzeugt.
+        use: Du kletterst den Schacht hinunter. Die Streben sind sehr rutschig.
+        room_id: hole
+        task:
+          type: item
+          description: Es ist sehr dunkel, du brauchst eine Taschenlampe, weil du dich sonst nicht zu recht findest.
+          fail: Leider hast du die Taschenlampe nicht. Du hast sie wohl im Schlafzimmer vergessen.
+          success: Zum Glück hast du die Taschenlampe gefunden. Du kannst nun in den Schacht hinunterklettern.
+          item_id: flashlight
+          amount: 1
+    objects:
+      - type: unlocker
+        use_item: schlauch
+        connection: emptybarell2hole
+        description: Der Schlauch füllt das Fass. $$Plötzlich fängt alles an zu beben. Das Fass hat einen Schacht im Boden erzeugt.
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Das kann doch kein Zufall sein, dass hier ein Schlauch und ein leeres Fass steht. Ich glaube, wir müssen das Fass auffüllen!"
+          end: true
+  - id: hole
+    name: Loch
+    description: Das Loch ist sehr tief. Du kannst nicht sehen, wie weit es geht. Es ist sehr dunkel.
+    connections:
+      - id: hole2shaft
+        direction: down
+        description: Es führt ein Weg in einen Schacht.
+        use: Du gehst in den Schacht.
+        room_id: shaft
+  - id: shaft
+    name: Schacht
+    description: Der Schacht ist sehr nass. Du musst aufpassen, dass du nicht ausrutschst. Es ist sehr dunkel.
+    connections:
+      - id: shaft2gang0
+        direction: right
+        description: Es führt ein Weg in einen schmalen Gang.
+        use: Du gehst in den schmalen Gang.
+        room_id: gang0
+  - id: gang0
+    name: Gang
+    description: Der Weg teilt sieht am Ende des Ganges. Es ist sehr dunkel.
+    connections:
+      - id: gang02shaft
+        direction: left
+        use: Du gehst zurück zum Schacht.
+        description: Es gibt einen Weg zurück zum Schacht.
+        room_id: shaft
+      - id: gang02tunnel
+        direction: down
+        use: Du gehst in den Tunnel.
+        description: Es gibt einen Weg nach unten in einen weiteren Tunnel.
+        room_id: tunnel
+      - id: gang02bigroom
+        direction: right
+        use: Du gehst in den großen Raum.
+        description: Es gibt einen Weg nach rechts in einen großen Raum.
+        room_id: bigroom
+  - id: tunnel
+    name: Tunnel
+    description: Scheint eine Sackgasse zu sein. Es ist sehr dunkel.
+    connections:
+      - id: tunnel2shhaft
+        direction: up
+        description: Es gibt einen Weg zurück zum Schacht.
+        use: Du gehst zurück zum Schacht.
+        room_id: gang0
+  - id: bigroom
+    name: Großer Raum
+    description: Der Raum ist sehr groß. In der Mitte steht ein riesiges Ungeheuer aus Stein. Das Maul des Ungeheuers ist offen. Es ist sehr dunkel.
+    connections:
+      - id: bigroom2gang0
+        direction: left
+        description: Es gibt einen Weg zurück zum Gang.
+        use: Du gehst zurück zum Gang.
+        room_id: gang0
+      - id: bigroom2monster
+        direction: right
+        description: Du kannst in das Maul des Ungeheuers klettern.
+        use: Du kletterst in das Maul des Ungeheuers.
+        room_id: monster
+  - id: monster
+    name: Ungeheuer
+    description: Du bist in dem Maul des Ungeheuers. Das Ungeheuer errinnert stark an Leo, denn es müffelt sehr stark. Es ist sehr dunkel.
+    connections:
+      - id: monster2bigroom
+        direction: left
+        description: Du kannst aus dem Maul des Ungeheuers klettern.
+        use: Du kletterst aus dem Maul des Ungeheuers.
+        room_id: bigroom
+      - id: monster2shaft2
+        direction: down
+        description: Eine kleine Luke führt in einem kleinen Schacht.
+        use: Du kletterst in den kleinen Schacht.
+        room_id: shaft2
+  - id: shaft2
+    name: Schacht
+    description: Der Schacht ist sehr eng, du kannst dich nur in zwei Richtungen bewegen. Es ist sehr dunkel.
+    connections:
+      - id: shaft22monster
+        direction: up
+        description: Du kannst aus dem kleinen Schacht wieder in das Maul des Ungeheuers klettern.
+        use: Du kletterst aus dem kleinen Schacht wieder in das Maul des Ungeheuers.
+        room_id: monster
+      - id: shaft22lore
+        direction: left
+        description: Am Ende des Schachts ist eine Lore.
+        use: Du steigst in die Lore.
+        room_id: lore
+  - id: lore
+    name: Lore
+    description: Die Lore sieht sehr alt aus. Sie ist von der Marke Hannelore. Ein gutes Modell!
+    connections:
+      - id: lore2shaft2
+        direction: right
+        description: Du kannst aus der Lore wieder aussteigen.
+        use: Du steigst aus der Lore aus.
+        room_id: shaft2
+      - id: lore2mine
+        direction: down
+        description: Die Lore fährt in eine Mine.
+        use: Bob legt einen großen Hebel um. Die Lore fängt an sich langsam zu bewegen und wird immer schneller! $$Ihr knallt an das Ende der Schienen.
+        room_id: mine
+  - id: mine
+    name: Mine
+    description: Die Mine ist sehr dunkel. Du kannst zwei Gänge sehen. Du kannst nicht zuück, da die Lore zerstört ist.
+    connections:
+      - id: mine2gang1
+        direction: left
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den linken Gang.
+        room_id: gang1
+      - id: mine2gang2
+        direction: right
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den rechten Gang.
+        room_id: gang2
+  - id: gang1
+    name: Gang
+    description: Der Gang ist sehr schmal. Es ist sehr dunkel.
+    connections:
+      - id: gang12mine
+        direction: up
+        description: Es gibt einen Weg zurück zur Mine.
+        use: Du gehst zurück zur Mine.
+        room_id: mine
+      - id: gang12gang3
+        direction: left
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den linken Gang.
+        room_id: gang3
+      - id: gang12gang 4
+        direction: right
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den rechten Gang.
+        room_id: gang4
+  - id: gang2
+    name: Gang
+    description: Der Gang ist sehr schmal. Es ist sehr dunkel.
+    connections:
+      - id: gang22mine
+        direction: up
+        description: Es gibt einen Weg zurück zur Mine.
+        use: Du gehst zurück zur Mine.
+        room_id: mine
+      - id: gang22gang5
+        direction: left
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den linken Gang.
+        room_id: gang5
+      - id: gang22gang6
+        direction: right
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den rechten Gang.
+        room_id: gang6
+  - id: gang3
+    name: Gang
+    description: Der Gang sieht genau aus wie der Gang vorher. Es ist sehr dunkel.
+    connections:
+      - id: gang32gang1
+        direction: up
+        description: Es gibt einen Weg zurück zum vorherigen Gang.
+        use: Du gehst zurück zum vorherigen Gang.
+        room_id: gang1
+      - id: gang32deadend
+        direction: left
+        description: Es führt ein Weg in eine Sackgasse.
+        use: Du gehst in die Sackgasse.
+        room_id: deadend
+  - id: deadend
+    name: Sackgasse
+    description: Der Gang endet in einer Sackgasse. Es ist sehr dunkel.
+    connections:
+      - id: deadend2gang3
+        direction: right
+        description: Es gibt einen Weg zurück zum vorherigen Gang.
+        use: Du gehst zurück zum vorherigen Gang.
+        room_id: gang3
+  - id: gang4
+    name: Gang
+    description: Der Gang sieht genau aus wie der Gang vorher. Es ist sehr dunkel.
+    connections:
+      - id: gang42gang1
+        direction: up
+        description: Es gibt einen Weg zurück zum vorherigen Gang.
+        use: Du gehst zurück zum vorherigen Gang.
+        room_id: gang1
+      - id: gang42gang7
+        direction: right
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den rechten Gang.
+        room_id: gang7
+  - id: gang5
+    name: Wolfgang
+    description: Der Gang sieht genau aus wie der Gang vorher. Es ist sehr dunkel.
+    connections:
+      - id: gang52gang2
+        direction: up
+        description: Es gibt einen Weg zurück zum vorherigen Gang.
+        use: Du gehst zurück zum vorherigen Gang.
+        room_id: gang2
+      - id: gang52gang7
+        direction: left
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den linken Gang.
+        room_id: gang7
+  - id: gang6
+    name: Gang
+    description: Der Gang sieht genau aus wie der Gang vorher. Es ist sehr dunkel.
+    connections:
+      - id: gang62gang2
+        direction: up
+        description: Es gibt einen Weg zurück zum vorherigen Gang.
+        use: Du gehst zurück zum vorherigen Gang.
+        room_id: gang2
+      - id: gang62gang8
+        direction: right
+        description: Es führt ein Weg in einen Gang.
+        use: Du gehst in den rechten Gang.
+        room_id: gang8
+  - id: gang7
+    name: Gang
+    description: Der Gang sieht genau aus wie der Gang vorher. Es ist sehr dunkel.
+    connections:
+      - id: gang72gang4
+        direction: up
+        description: Es gibt einen Weg zu einem Gang nach oben.
+        use: Du gehst in den Gang nach oben.
+        room_id: gang4
+      - id: gang72gang5
+        direction: down
+        description: Es gibt einen Weg zu einem Gang nach unten.
+        use: Du gehst in den Gang nach unten.
+        room_id: gang5
+      - id: gang72gang8
+        direction: right
+        description: Es führt ein Weg in einen Gang. Dieser Gang sieht anders aus als die anderen.
+        use: Du gehst in den rechten Gang.
+        room_id: gang8
+  - id: gang8
+    name: Gang
+    description: Der Gang sieht anders aus als die anderen. Es ist Licht in diesem Gang.
+    connections:
+      - id: gang82gang6
+        direction: up
+        description: Es gibt einen Weg zu einem Gang nach oben.
+        use: Du gehst in den Gang nach oben.
+        room_id: gang6
+      - id: gang82gang7
+        direction: left
+        description: Es gibt einen Weg zu einem Gang nach unten.
+        use: Du gehst in den Gang nach unten.
+        room_id: gang7
+      - id: gang82doorroom
+        direction: right
+        description: Es gibt einen Weg zu einem Raum mit einer Tür.
+        use: Du gehst in den Raum mit der Tür.
+        room_id: doorroom
+  - id: doorroom
+    name: Raum
+    description: Der Raum ist sehr groß. Es ist sehr dunkel. Es gibt eine Tür.
+    connections:
+      - id: doorroom2gang8
+        direction: left
+        description: Es gibt einen Weg zurück zum Gang.
+        use: Du gehst zurück zum Gang.
+        room_id: gang8
+      - id: doorroom2basement
+        direction: down
+        description: "Es gibt einen Weg, bei dem ein Schild steht: \"Keller\"."
+        use: Du gehst zurück in den Keller des Schlosses.
+        room_id: basement
+    objects:
+      - type: dialogue
+        autoStart: true
+        startSequence:
+          text: "Komisch. Die Tür ist verschlossen, aber hier ist kein Schlüsselloch. Was soll denn der Zettel an der Tür bedeuten?\nDa steht: \"Glück auf. Das Licht des Tages ist des Bergmanns Lohn\" $$Hier geht es sicherlich nicht weiter. Komm wir gehen wieder zurück."
+          end: true
+      - type: lootable
+        item: note1
+        amount: 1
+        loot: Du hast einen Zettel gefunden.
+        unlocker: null
+      - type: unlocker
+        use_item: null
+        connection: castle2garden
+        description: null
+      - type: unlocker
+        use_item: null
+        connection: basement2castle
+        description: null
